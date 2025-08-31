@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: schoolsphere-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: schoolsphere
+      MYSQL_USER: app
+      MYSQL_PASSWORD: app
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+volumes:
+  db_data:
