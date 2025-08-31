@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-moonDance: var(--font-moon-dance);
+  --font-poppins: var(--font-poppins);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +20,18 @@
 }
 
 body {
-  background: var(--background);
+  background: #F0C27B;
+  background: -webkit-linear-gradient(to right, #4B1248, #F0C27B); 
+  background: linear-gradient(to right, #4B1248, #F0C27B); 
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins);
 }
+
+nav h1 {
+  font-family: var(--font-moon-dance);
+}
+
+input {
+  @apply w-full px-4 py-3 border border-white/30 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:shadow-lg outline-none transition-all bg-white/5 backdrop-blur-sm text-white placeholder-white/60;
+}
+
