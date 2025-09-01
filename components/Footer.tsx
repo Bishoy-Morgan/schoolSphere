@@ -4,9 +4,9 @@ const Footer = () => {
     return (
         <footer className="bg-transparent border-t border-white/10 px-8 py-6">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-                <div className="flex items-center space-x-6">
+                <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
                     <a
-                    className="flex items-center space-x-2 md:text-xs text-white/80 hover:text-yellow-300 transition-colors"
+                    className="flex items-center space-x-2 text-sm md:text-xs text-white/80 hover:text-yellow-300 transition-colors"
                     href="https://nextjs.org/learn"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -14,7 +14,7 @@ const Footer = () => {
                         About Us
                     </a>
                     <a
-                    className="flex items-center space-x-2 md:text-xs text-white/80 hover:text-yellow-300 transition-colors"
+                    className="flex items-center space-x-2 text-sm md:text-xs text-white/80 hover:text-yellow-300 transition-colors"
                     href="https://vercel.com/templates?framework=next.js"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -22,7 +22,7 @@ const Footer = () => {
                         Contact
                     </a>
                     <a
-                    className="flex items-center space-x-2 md:text-xs text-white/80 hover:text-yellow-300 transition-colors"
+                    className="flex items-center space-x-2 text-sm md:text-xs text-white/80 hover:text-yellow-300 transition-colors"
                     href="https://vercel.com/templates?framework=next.js"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -30,7 +30,7 @@ const Footer = () => {
                         Privacy Policy
                     </a>
                     <a
-                    className="flex items-center space-x-2 md:text-xs text-white/80 hover:text-yellow-300 transition-colors"
+                    className="flex items-center space-x-2 text-sm md:text-xs text-white/80 hover:text-yellow-300 transition-colors"
                     href="https://vercel.com/templates?framework=next.js"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -39,7 +39,7 @@ const Footer = () => {
                     </a>
                 </div>
                 
-                <div className="text-sm md:text-xs text-white/60">
+                <div className="text-xs text-white/60 mt-6 md:mt-0">
                     © 2025 SchoolSphere. All rights reserved.
                 </div>
             </div>

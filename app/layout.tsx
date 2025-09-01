@@ -17,7 +17,7 @@ const moonDance = Moon_Dance({
 });
 
 export const metadata: Metadata = {
-  title: "SchoolSphere",
+  title: "Schoolsphere – Discover & Connect with Schools",
   description: "A platform for school management",
 };
 

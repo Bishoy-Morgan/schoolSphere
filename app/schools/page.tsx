@@ -52,6 +52,22 @@ export default function ShowSchools() {
         }
     };
 
+    // const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
+    
+    const getImagePath = (imagePath: string) => {
+        if (!imagePath) return "/schoolImages/default.jpg";
+
+        if (imagePath.startsWith('/')) {
+            return imagePath;
+        }
+        return `/schoolImages/${imagePath}`;
+    };
+
+    // Handle image error
+    // const handleImageError = (schoolId: number) => {
+    //     setImageErrors(prev => new Set([...prev, schoolId]));
+    // };
+
     return (
         <div className="min-h-screen">
             {/* Header Section */}
@@ -84,7 +100,7 @@ export default function ShowSchools() {
 
                     {/* Stats Bar */}
                     <div className="flex justify-center mb-12">
-                        <div className="bg-white/5 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/20">
+                        <div className="bg-white/5 backdrop-blur-md px-6 py-3 rounded-2xl">
                             <span className="text-white/90 font-medium">
                                 {loading ? 'Loading...' : `${filteredSchools.length} Schools Found`}
                             </span>
@@ -99,14 +115,14 @@ export default function ShowSchools() {
                 {loading ? (
                     // Loading State
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    {[...Array(8)].map((_, index) => (
-                        <div key={index} className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 animate-pulse">
-                            <div className="bg-white/20 rounded-2xl h-48 mb-4"></div>
-                            <div className="bg-white/20 rounded-lg h-6 mb-3"></div>
-                            <div className="bg-white/20 rounded-lg h-4 mb-2"></div>
-                            <div className="bg-white/20 rounded-lg h-4 w-3/4"></div>
-                        </div>
-                    ))}
+                        {[...Array(8)].map((_, index) => (
+                            <div key={index} className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 animate-pulse">
+                                <div className="bg-white/20 rounded-2xl h-48 mb-4"></div>
+                                <div className="bg-white/20 rounded-lg h-6 mb-3"></div>
+                                <div className="bg-white/20 rounded-lg h-4 mb-2"></div>
+                                <div className="bg-white/20 rounded-lg h-4 w-3/4"></div>
+                            </div>
+                        ))}
                     </div>
                 ) : filteredSchools.length === 0 ? (
                     // No Schools State
@@ -139,23 +155,20 @@ export default function ShowSchools() {
                             >
                                 {/* School Image */}
                                 <div className="relative h-48 overflow-hidden">
-                                    {school.image ? (
-                                        
-                                        <Image
-                                            src={school.image ? `/schoolImages/${school.image}` : "/schoolImages/default.jpg"}
-                                            alt={school.name}
-                                            width={400}
-                                            height={400}
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                        />
-                                        ) : (
-                                        <div className="w-full h-full bg-gradient-to-br from-white/20 to-white/10 flex items-center justify-center">
-                                            <div className="text-center">
-                                                <span className="text-6xl mb-2 block">🏫</span>
-                                                <span className="text-white/60 text-sm">No Image</span>
-                                            </div>
-                                        </div>
-                                    )}
+                                    <Image
+                                        src={getImagePath(school.image)}
+                                        alt={school.name}
+                                        width={400}
+                                        height={400}
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        onError={(e) => {
+                                            // Fallback to default image
+                                            const target = e.currentTarget as HTMLImageElement;
+                                            if (target.src !== '/schoolImages/default.jpg') {
+                                                target.src = '/schoolImages/default.jpg';
+                                            }
+                                        }}
+                                    />
                                     {/* Overlay Gradient */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>

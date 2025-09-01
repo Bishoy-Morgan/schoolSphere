@@ -60,9 +60,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen px-4 md:px-8 py-12">
       {/* Main Content */}
-      <main className="flex-1 flex items-center justify-center px-8 py-12">
+      <main className="flex-1 flex items-center justify-center  ">
         <div className="max-w-7xl w-full mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             
@@ -81,7 +81,7 @@ export default function Home() {
                 </p>
               </div>
               
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-col-1 md:grid-cols-2 gap-6">
                 <div className="bg-white/5 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-white/5">
                   <div className="w-16 h-16 bg-yellow-400/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 border border-yellow-300/30">
                     <Image src={schoolSVG} alt="School Icon" width={40} height={40} />
@@ -98,7 +98,7 @@ export default function Home() {
                   <p className="text-sm text-white/80">Get valuable insights from your school data</p>
                 </div>
               </div>
-              <div className="mt-16">
+              <div className="mt-16 flex justify-center md:block">
                 <Link href={`/schools`} >
                   <button className="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white font-bold py-3 px-10 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none backdrop-blur-sm ">
                     Discover Schools
@@ -108,7 +108,7 @@ export default function Home() {
             </div>
 
             {/* Right Side - Enhanced Form */}
-            <div className="flex justify-center">
+            <div className="flex justify-center mt-24 md:mt-0">
               <div className="w-full max-w-md">
                 <div className="bg-white/5 backdrop-blur-2xl rounded-3xl shadow-2xl border border-white/10 p-8">
                   <div className="text-center mb-8">
