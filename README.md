@@ -78,7 +78,7 @@ DATABASE_NAME=schools
 ---
 
 📷 Screenshots
-(/screenshot.png)
+(Screenshot.png)
 
 ---
 
