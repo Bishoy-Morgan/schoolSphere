@@ -69,7 +69,7 @@ export default function Home() {
             {/* Left Side - Welcome Content */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-2xl">
+                <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight drop-shadow-2xl">
                   Welcome to{' '}
                   <span className="bg-gradient-to-r from-yellow-300 to-yellow-100 bg-clip-text text-transparent">
                     SchoolSphere
@@ -98,9 +98,11 @@ export default function Home() {
                   <p className="text-sm text-white/80">Get valuable insights from your school data</p>
                 </div>
               </div>
-              <div className="mt-8">
-                <Link href={`/schools`} className="bg-gradient-to-r from-[#F0C27B] to-[#4B1248] text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none backdrop-blur-sm">
-                  Discover Schools
+              <div className="mt-16">
+                <Link href={`/schools`} >
+                  <button className="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white font-bold py-3 px-10 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none backdrop-blur-sm ">
+                    Discover Schools
+                  </button>
                 </Link>
               </div>
             </div>
@@ -247,7 +249,7 @@ export default function Home() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-yellow-400 to-yellow-300 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none backdrop-blur-sm border border-yellow-300/50"
+                      className="w-full bg-white text-yellow-400 font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none backdrop-blur-sm border border-yellow-300/50"
                     >
                       {isSubmitting ? (
                         <div className="flex items-center justify-center space-x-2">
