@@ -47,22 +47,23 @@ docker-compose up -d
 ```
 This will spin up a MySQL container with the configured database.
 
+---
+
 ▶️ Running the Project
 Development (Localhost):
 ```
 npm install
 npm run dev
 ```
-Open http://localhost:3000 in your browser.
-
-Connects to the local Dockerized MySQL DB.
+- **Open http://localhost:3000 in your browser.
+- **Connects to the local Dockerized MySQL DB.
 
 Production (Deployed on Vercel):
-The frontend is hosted on Vercel.
+- **The frontend is hosted on Vercel.
+- **For database access, you must use a cloud-hosted MySQL service (e.g., Railway, PlanetScale, Aiven, Supabase, etc.) instead of local Docker.
+- **Add your production DB credentials in Vercel Environment Variables.
 
-For database access, you must use a cloud-hosted MySQL service (e.g., Railway, PlanetScale, Aiven, Supabase, etc.) instead of local Docker.
-
-Add your production DB credentials in Vercel Environment Variables.
+---
 
 🔑 Environment Variables
 Make sure to configure these both locally (.env) and in your hosting provider:
@@ -74,13 +75,18 @@ DATABASE_PASSWORD=schoolpass
 DATABASE_NAME=schools
 ```
 
-📷 Screenshots
-![Alt Text](./screenshot.png)
+---
 
+📷 Screenshots
+(/screenshot.png)
+
+---
 
 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 Feel free to open an issue or submit a pull request.
+
+---
 
 📜 License
 This project is licensed under the MIT License.
