@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏫 SchoolSphere
 
-## Getting Started
+SchoolSphere is a modern web application designed to simplify the management and presentation of school data.  
+It allows schools to showcase their information, images, and details in an organized and user-friendly way.  
 
-First, run the development server:
+---
+
+## 🚀 Features
+- 📚 Add, edit, and manage school data with ease.  
+- 🖼️ Upload and display school images.  
+- 🌍 Multilingual support (future-ready).  
+- ⚡ Fast, responsive, and optimized frontend.  
+- 🔐 Secure MySQL database integration.  
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend**: Next.js, React, TailwindCSS  
+- **Backend**: Node.js (API routes)  
+- **Database**: MySQL (Dockerized)  
+- **Hosting**: Vercel (frontend) & Docker for local DB  
+
+---
+
+## 🐳 Docker Setup
+
+### 1. Clone the repository:
 
 ```bash
+git clone https://github.com/your-username/schoolsphere.git
+cd schoolsphere
+2. Configure environment variables
+Create a .env file in the root folder:
+
+env
+Copy code
+MYSQL_ROOT_PASSWORD=StrongRootPass123!
+MYSQL_DATABASE=schools
+MYSQL_USER=schooluser
+MYSQL_PASSWORD=schoolpass
+3. Start Docker services:
+bash
+Copy code
+docker-compose up -d
+This will spin up a MySQL container with the configured database.
+
+▶️ Running the Project
+Development (Localhost):
+bash
+Copy code
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Connects to the local Dockerized MySQL DB.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Production (Deployed on Vercel):
+The frontend is hosted on Vercel.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+For database access, you must use a cloud-hosted MySQL service (e.g., Railway, PlanetScale, Aiven, Supabase, etc.) instead of local Docker.
 
-## Learn More
+Add your production DB credentials in Vercel Environment Variables.
 
-To learn more about Next.js, take a look at the following resources:
+🔑 Environment Variables
+Make sure to configure these both locally (.env) and in your hosting provider:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+env
+Copy code
+DATABASE_HOST=localhost
+DATABASE_PORT=3306
+DATABASE_USER=schooluser
+DATABASE_PASSWORD=schoolpass
+DATABASE_NAME=schools
+📷 Screenshots
+(Add screenshots of your website UI here to make the README more attractive!)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+Feel free to open an issue or submit a pull request.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📜 License
+This project is licensed under the MIT License.
+You are free to use, modify, and distribute it with attribution.
