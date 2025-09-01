@@ -29,27 +29,30 @@ It allows schools to showcase their information, images, and details in an organ
 ```bash
 git clone https://github.com/your-username/schoolsphere.git
 cd schoolsphere
+```
+
 2. Configure environment variables
 Create a .env file in the root folder:
+```
+DB_ROOT_PASSWORD=SchoolSphere2011
+DB_NAME=schools
+DB_USER=schooluser
+DB_PASSWORD=schoolpass
+DB_PORT=3306
+```
 
-env
-Copy code
-MYSQL_ROOT_PASSWORD=StrongRootPass123!
-MYSQL_DATABASE=schools
-MYSQL_USER=schooluser
-MYSQL_PASSWORD=schoolpass
 3. Start Docker services:
-bash
-Copy code
+```
 docker-compose up -d
+```
 This will spin up a MySQL container with the configured database.
 
 ▶️ Running the Project
 Development (Localhost):
-bash
-Copy code
+```
 npm install
 npm run dev
+```
 Open http://localhost:3000 in your browser.
 
 Connects to the local Dockerized MySQL DB.
@@ -63,16 +66,17 @@ Add your production DB credentials in Vercel Environment Variables.
 
 🔑 Environment Variables
 Make sure to configure these both locally (.env) and in your hosting provider:
-
-env
-Copy code
+```
 DATABASE_HOST=localhost
 DATABASE_PORT=3306
 DATABASE_USER=schooluser
 DATABASE_PASSWORD=schoolpass
 DATABASE_NAME=schools
+```
+
 📷 Screenshots
-(Add screenshots of your website UI here to make the README more attractive!)
+![Alt Text](./screenshot.png)
+
 
 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
