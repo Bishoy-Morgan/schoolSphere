@@ -94,13 +94,19 @@ export default function Home() {
                   <div className="w-16 h-16 bg-purple-400/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 border border-purple-300/30">
                     <Image src={analyticsSVG} alt="Data Insights Icon" width={36} height={36} />
                   </div>
-                  <h3 className="font-semibold text-white mb-2">Data Insights</h3>
-                  <p className="text-sm text-white/80">Get valuable insights from your school data</p>
+                  <h3 className="font-semibold text-white mb-2">
+                    Data Insights
+                  </h3>
+                  <p className="text-sm text-white/80">
+                    Get valuable insights from your school data
+                  </p>
                 </div>
               </div>
-              <div className="mt-16 flex justify-center md:block">
+              <div className="mt-16 flex justify-center lg:block">
                 <Link href={`/schools`} >
-                  <button className="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white font-bold py-3 px-10 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none backdrop-blur-sm ">
+                  <button 
+                  className="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white font-bold py-3 px-10 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none backdrop-blur-sm "
+                  >
                     Discover Schools
                   </button>
                 </Link>
@@ -154,7 +160,9 @@ export default function Home() {
                         placeholder="school@example.com"
                       />
                       {errors.email_id && (
-                        <p className="text-yellow-300 text-sm mt-1 font-medium">{errors.email_id.message}</p>
+                        <p className="text-yellow-300 text-sm mt-1 font-medium">
+                          {errors.email_id.message}
+                        </p>
                       )}
                     </div>
 
@@ -176,7 +184,8 @@ export default function Home() {
                         placeholder="Enter contact number"
                       />
                       {errors.contact && (
-                        <p className="text-yellow-300 text-sm mt-1 font-medium">{errors.contact.message}</p>
+                        <p className="text-yellow-300 text-sm mt-1 font-medium">
+                          {errors.contact.message}</p>
                       )}
                     </div>
 
