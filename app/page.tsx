@@ -60,7 +60,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen px-4 md:px-8 py-12">
+    <div className="w-full min-h-screen px-4 md:px-8 py-12">
       {/* Main Content */}
       <main className="flex-1 flex items-center justify-center  ">
         <div className="max-w-7xl w-full mx-auto">
